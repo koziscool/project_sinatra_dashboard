@@ -40,12 +40,3 @@ class GlassdoorCompanyQuery
   end
 
 end
-
-
-query = GlassdoorCompanyQuery.new( "53058", "sKW4n63kz1", "Intel")
-query.make_request
-pp query.glassdoor_response
-
-File.open("glassdoor_output.txt","w") do |f|
-  PP.pp(query.glassdoor_response,f)
-end
